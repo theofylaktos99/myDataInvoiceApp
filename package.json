@@ -1,0 +1,26 @@
+{
+  "name": "mydata-invoice-app",
+  "version": "1.2.0",
+  "description": "myDATA Invoice Management System - Multi-client monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@mydata/italian-corner",
+    "dev:italian-corner": "npm run dev --workspace=@mydata/italian-corner",
+    "dev:kandavlos": "npm run dev --workspace=@mydata/kandavlos",
+    "build:italian-corner": "npm run build --workspace=@mydata/italian-corner",
+    "build:kandavlos": "npm run build --workspace=@mydata/kandavlos",
+    "electron:italian-corner": "npm run electron:dist --workspace=@mydata/italian-corner",
+    "electron:kandavlos": "npm run electron:dist --workspace=@mydata/kandavlos",
+    "build-all": "npm run build:italian-corner && npm run build:kandavlos",
+    "backend": "node packages/core/backend/aade-backend-standalone.cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theofylaktos99/myDataInvoiceApp.git"
+  },
+  "author": "theofylaktos99",
+  "license": "MIT"
+}
