@@ -14,7 +14,10 @@ myDataInvoiceApp/
 │   ├── italian-corner/          # Italian Corner client
 │   │   ├── src/branches/        # Branch configs
 │   │   └── assets/              # Logos, icons
-│   └── kandavlos/               # Kandavlos client
+│   ├── kandavlos/               # Kandavlos client
+│   │   ├── src/branches/        # Branch configs
+│   │   └── assets/              # Logos, icons
+│   └── papadomichelakis/        # Παπαδομιχελάκης client
 │       ├── src/branches/        # Branch configs
 │       └── assets/              # Logos, icons
 ├── package.json                 # Workspaces config
@@ -35,6 +38,9 @@ npm run dev:italian-corner
 
 # Development (Kandavlos)
 npm run dev:kandavlos
+
+# Development (Παπαδομιχελάκης)
+npm run dev:papadomichelakis
 ```
 
 ## 🔧 Build Commands
@@ -47,6 +53,10 @@ npm run electron:italian-corner
 # Build Kandavlos
 npm run build:kandavlos
 npm run electron:kandavlos
+
+# Build Παπαδομιχελάκης
+npm run build:papadomichelakis
+npm run electron:papadomichelakis
 
 # Build all clients
 npm run build-all
@@ -80,6 +90,7 @@ npm run build-all
 |--------|----------|--------|
 | Italian Corner | central, villa1, villa2 | ✅ Active |
 | Kandavlos | kandavlos | ✅ Active |
+| Παπαδομιχελάκης | papadomichelakis | ✅ Active |
 
 ## 📋 Features
 
