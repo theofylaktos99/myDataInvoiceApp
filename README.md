@@ -7,16 +7,25 @@ Multi-client invoice management system for Greek businesses with AADE myDATA int
 ```
 myDataInvoiceApp/
 ├── packages/
-│   ├── core/                    # Shared code
+│   ├── core/                    # Shared code & backend
 │   │   ├── backend/             # AADE Backend service
 │   │   ├── src/components/      # React components
 │   │   └── src/utils/           # Utilities
-│   ├── italian-corner/          # Italian Corner client
-│   │   ├── src/branches/        # Branch configs
+│   ├── italian-corner/          # Italian Corner (standard version)
+│   │   ├── src/branches/        # Branch configs (central, villa1, villa2)
 │   │   └── assets/              # Logos, icons
-│   └── kandavlos/               # Kandavlos client
-│       ├── src/branches/        # Branch configs
-│       └── assets/              # Logos, icons
+│   ├── kandavlos/               # Kandavlos Restaurant
+│   │   ├── src/branches/        # Branch config
+│   │   └── assets/              # Logos, icons
+│   ├── seg-advanced/            # Italian Corner (advanced version with GSIS + Electron)
+│   │   ├── src/                 # Enhanced components
+│   │   ├── backendaade/         # Backend service
+│   │   ├── DELIVERY/            # Auto-update package
+│   │   └── docs/                # GitHub Pages docs
+│   └── papadomichelakis/        # Τεντοπέργκολες Παπαδομιχελάκης
+│       ├── src/                 # React + TypeScript components
+│       ├── public/              # Static assets
+│       └── final_invoice_app.jsx # Main invoice component
 ├── package.json                 # Workspaces config
 └── README.md
 ```
@@ -30,26 +39,31 @@ npm install
 # Start backend
 npm run backend
 
-# Development (Italian Corner)
-npm run dev:italian-corner
-
-# Development (Kandavlos)
-npm run dev:kandavlos
+# Development - Choose a client:
+npm run dev:italian-corner        # Standard version
+npm run dev:seg-advanced          # Advanced version (GSIS + Electron)
+npm run dev:kandavlos             # Kandavlos restaurant
+npm run dev:papadomichelakis      # Tent pergolas
 ```
 
 ## 🔧 Build Commands
 
 ```bash
-# Build Italian Corner
+# Build specific clients:
 npm run build:italian-corner
-npm run electron:italian-corner
-
-# Build Kandavlos
+npm run build:seg-advanced
 npm run build:kandavlos
-npm run electron:kandavlos
+npm run build:papadomichelakis
 
 # Build all clients
 npm run build-all
+
+# Electron (Desktop) builds:
+npm run electron:italian-corner
+npm run electron:kandavlos
+
+# Run backend standalone:
+npm run backend
 ```
 
 ## 📦 Adding a New Client
@@ -76,10 +90,12 @@ npm run build-all
 
 ## 🏢 Current Clients
 
-| Client | Branches | Status |
-|--------|----------|--------|
-| Italian Corner | central, villa1, villa2 | ✅ Active |
-| Kandavlos | kandavlos | ✅ Active |
+| Client | Type | Branches | Status | Notes |
+|--------|------|----------|--------|-------|
+| Italian Corner | Standard | central, villa1, villa2 | ✅ Active | Original version |
+| SEG Advanced | Enterprise | Multi-branch | ✅ Active | GSIS Lookup, Electron, Auto-update |
+| Kandavlos | Restaurant | kandavlos | ✅ Active | Single location |
+| Παπαδομιχελάκης | Tent Pergolas | - | ✅ Active | Τεντοπέργκολες (new client) |
 
 ## 📋 Features
 

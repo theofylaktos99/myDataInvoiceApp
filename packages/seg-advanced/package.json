@@ -1,0 +1,32 @@
+{
+  "name": "@mydata/seg-advanced",
+  "version": "1.0.0",
+  "description": "Advanced Italian Corner Invoice System (SEG Enhancement)",
+  "main": "frontend-server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node frontend-server.js",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+  "predeploy": "cross-env GHPAGES_BASE=/s.e.g_myData-Invoice-App/ vite build",
+  "deploy": "gh-pages -d dist",
+    "backend": "node backendaade/aade-backend-stub.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
+    "@vitejs/plugin-react": "^5.1.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
+    "vite": "^7.1.12",
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.1.1"
+  }
+}
